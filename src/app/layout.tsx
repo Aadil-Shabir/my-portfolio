@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { GridPattern } from "@/components/ui/grid-pattern";
+import { cn } from "@/lib/utils";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -29,7 +31,16 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased min-w-screen min-h-screen flex flex-col`}
             >
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-                    <main className="flex-1 max-w-screen-8xl mx-auto w-full h-full">{children}</main>
+                    <main className="flex-1 relative max-w-screen-8xl mx-auto w-full h-full">
+                        <GridPattern
+                            width={20}
+                            height={20}
+                            x={100}
+                            y={100}
+                            className={cn("[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]")}
+                        />
+                        {children}
+                    </main>
                     <footer className="bg-black text-gray-300 p-4 text-center">
                         &copy; {new Date().getFullYear()} MyApp
                     </footer>
