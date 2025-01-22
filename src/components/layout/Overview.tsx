@@ -16,11 +16,11 @@ const Overview = ({ goBack }: OverviewProps) => {
     const router = useRouter();
 
     return (
-        <div className={cn("flex flex-col gap-4 border rounded-xl sm:p-4", goBack && "relative")}>
+        <div className={cn("flex flex-col gap-4 h-full border rounded-xl sm:p-4", goBack && "relative")}>
             {goBack && (
                 <div className="absolute top-2 right-2 z-10">
-                    <Button size="icon" variant="ghost" onClick={() => router.back()}>
-                        <ChevronLeft />
+                    <Button size="icon" variant="ghost" onClick={() => router.push("/")}>
+                        <ChevronLeft className="text-gray-500" />
                     </Button>
                 </div>
             )}

@@ -6,4 +6,6 @@ export type Experience = {
     location: string;
     mode: "On-site" | "Remote" | "Hybrid";
     nature: "Full-time" | "Part-time" | "Contract" | "Freelance";
+    details?: string[];
+    projectLink?: string;
 };
