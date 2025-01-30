@@ -7,11 +7,11 @@ export default function WorkExperiencePage() {
     return (
         <Layout>
             <div className="grid grid-cols-9 gap-4">
-                <div className="col-span-4">
-                    <p className="text-3xl font-bold mb-4">Work Experience</p>
+                <div className="lg:col-span-4 col-span-9 lg:block flex justify-center flex-col items-center">
+                    <p className="text-3xl font-bold mb-4 lg:text-start text-center">Work Experience</p>
                     <WorkExperience experiences={experiences} />
                 </div>
-                <div className="col-span-5 border rounded-xl p-4 shadow-lg">
+                <div className="lg:col-span-5 col-span-9 max-lg:hidden border rounded-xl p-4 shadow-lg">
                     <WorkExperienceDetails />
                 </div>
             </div>

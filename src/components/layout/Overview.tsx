@@ -16,7 +16,7 @@ const Overview = ({ goBack }: OverviewProps) => {
     const router = useRouter();
 
     return (
-        <div className={cn("flex flex-col gap-4 h-full border rounded-xl sm:p-4", goBack && "relative")}>
+        <div className={cn("flex flex-col gap-4 h-full lg:border rounded-xl sm:p-4 px-4 py-10", goBack && "relative")}>
             {goBack && (
                 <div className="absolute top-2 right-2 z-10">
                     <Button size="icon" variant="ghost" onClick={() => router.push("/")}>
@@ -24,14 +24,14 @@ const Overview = ({ goBack }: OverviewProps) => {
                     </Button>
                 </div>
             )}
-            <div className="relative overflow-hidden rounded-full shadow-lg z-0">
+            <div className="relative max-lg:flex max-lg:justify-center overflow-hidden lg:rounded-full lg:shadow-lg z-0">
                 <Image
                     src="/assets/AB-Memon.png"
                     alt="AB Memon Image"
-                    sizes="800px"
-                    className="w-full h-auto transform shadow-lg transition-transform duration-500 ease-in-out hover:scale-110 hover:opacity-90"
-                    height={100}
-                    width={100}
+                    sizes="1000px"
+                    className="w-full h-auto max-lg:max-w-[250px] max-lg:max-h-[250px] max-lg:rounded-full transform shadow-lg transition-transform duration-500 ease-in-out hover:scale-110 hover:opacity-90"
+                    height={1000}
+                    width={1000}
                 />
             </div>
             <div className="flex flex-col items-center gap-2 text-center">

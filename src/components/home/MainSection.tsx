@@ -7,6 +7,8 @@ import { experiences } from "@/data/experiences";
 import AccordionContentWrapper from "../AccordionContentWrapper";
 import withAccordionHeight from "../hoc/withAccordionHeight";
 import { AboutMeText } from "../AboutMe";
+import { ProjectsList } from "../Projects";
+import { EducationList } from "../Education";
 
 const EnhancedAccordionContent = withAccordionHeight(AccordionContentWrapper);
 
@@ -36,6 +38,33 @@ const MainSection = () => {
                     <AccordionContent>
                         <EnhancedAccordionContent redirectPath="/work-experience" maxHeight={250}>
                             <WorkExperience experiences={experiences} />
+                        </EnhancedAccordionContent>
+                    </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="projects">
+                    <AccordionTrigger onClick={() => toggleAccordion("projects")}>Projects</AccordionTrigger>
+                    <AccordionContent>
+                        <EnhancedAccordionContent redirectPath="/projects" maxHeight={250}>
+                            <ProjectsList />
+                        </EnhancedAccordionContent>
+                    </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="education">
+                    <AccordionTrigger onClick={() => toggleAccordion("education")}>Education</AccordionTrigger>
+                    <AccordionContent>
+                        <EnhancedAccordionContent redirectPath="/education" maxHeight={250}>
+                            <EducationList />
+                        </EnhancedAccordionContent>
+                    </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="contact-me">
+                    <AccordionTrigger onClick={() => toggleAccordion("contact-me")}>Contact Me</AccordionTrigger>
+                    <AccordionContent>
+                        <EnhancedAccordionContent redirectPath="/contact-me" maxHeight={250}>
+                            <EducationList />
                         </EnhancedAccordionContent>
                     </AccordionContent>
                 </AccordionItem>
