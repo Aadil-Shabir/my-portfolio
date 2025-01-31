@@ -9,6 +9,7 @@ import withAccordionHeight from "../hoc/withAccordionHeight";
 import { AboutMeText } from "../AboutMe";
 import { ProjectsList } from "../Projects";
 import { EducationList } from "../Education";
+import ContactMe from "../ContactMe";
 
 const EnhancedAccordionContent = withAccordionHeight(AccordionContentWrapper);
 
@@ -63,8 +64,8 @@ const MainSection = () => {
                 <AccordionItem value="contact-me">
                     <AccordionTrigger onClick={() => toggleAccordion("contact-me")}>Contact Me</AccordionTrigger>
                     <AccordionContent>
-                        <EnhancedAccordionContent redirectPath="/contact-me" maxHeight={250}>
-                            <EducationList />
+                        <EnhancedAccordionContent redirectPath="/contact-me" maxHeight={400}>
+                            <ContactMe />
                         </EnhancedAccordionContent>
                     </AccordionContent>
                 </AccordionItem>
