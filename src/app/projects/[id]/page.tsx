@@ -9,10 +9,9 @@ import {
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { projects } from "@/data/projects";
-import { Params } from "next/dist/server/request/params";
 import Image from "next/image";
 
-export default async function ProjectPage({ params }: { params: Params }) {
+export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
 
     const project = projects.find((item) => item.title === id);

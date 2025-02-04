@@ -38,10 +38,10 @@ const Overview = ({ goBack }: OverviewProps) => {
                 <p className="text-2xl font-bold">AB Memon</p>
                 <p className="text-xl font-semibold border-t leading-[35px]">Full Stack Developer</p>
                 <p className="text-base italic font-medium sm:my-2">
-                    "Self-taught Full Stack Web Developer with years of experience working with both small and large
-                    companies. I've successfully developed and launched over{" "}
+                    {`Self-taught Full Stack Web Developer with years of experience working with both small and large
+                    companies. I've successfully developed and launched over `}
                     <span className="bg-yellow-400 text-black">three SaaS</span> applications serving 1000+ users.
-                    Currently, I'm focused on AI integration and building AI Agents."
+                    {`Currently, I'm focused on AI integration and building AI Agents.`}
                 </p>
             </div>
             <div className="flex justify-center gap-4">
