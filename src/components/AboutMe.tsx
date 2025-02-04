@@ -6,8 +6,17 @@ import { cn } from "@/lib/utils";
 import BugFound from "./BugFound";
 import { aboutMe } from "@/data/aboutMe";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const AboutMe = () => {
+    return (
+        <Suspense fallback={<p>Loading...</p>}>
+            <AboutMeContent />
+        </Suspense>
+    );
+};
+
+const AboutMeContent = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
 
@@ -15,9 +24,7 @@ const AboutMe = () => {
 
     const updateTextSize = (newSize: string) => {
         const params = new URLSearchParams(searchParams.toString());
-
         params.set("textSize", newSize);
-
         router.push(`?${params.toString()}`);
     };
 
