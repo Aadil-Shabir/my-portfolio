@@ -10,7 +10,7 @@ const WorkExperienceDetails = () => {
     const workExperience = experiences.find((experience) => experience.company === name);
 
     return (
-        <div className="flex flex-col gap-4 h-full">
+        <div className="flex flex-col gap-4 h-full shadow-lg">
             {!workExperience || workExperience === undefined ? (
                 <div className="w-full h-full flex items-center justify-center">
                     <p className="dark:text-yellow-500">Please Select any Work Experience to know more about it</p>
@@ -32,7 +32,7 @@ const WorkExperienceDetails = () => {
                             <p>{workExperience?.duration}</p>
                         </div>
                         <div className="col-span-3">
-                            <p className="text-muted-foreground text-sm">Company's Location</p>
+                            <p className="text-muted-foreground text-sm">Company&apos;s Location</p>
                             <p>{workExperience?.location}</p>
                         </div>
                         <div className="col-span-3">
@@ -40,14 +40,14 @@ const WorkExperienceDetails = () => {
                             <p>{workExperience?.mode}</p>
                         </div>
                         <div className="col-span-3">
-                            <p className="text-muted-foreground text-sm">Company's URL</p>
+                            <p className="text-muted-foreground text-sm">Company&apos;s URL</p>
                             <Link href={workExperience?.link || ""} className="text-blue-600" target="_blank">
                                 {workExperience?.link ? "Link" : "-"}
                             </Link>
                         </div>
                         {workExperience.projectLink && (
                             <div className="col-span-3">
-                                <p className="text-muted-foreground text-sm">Project's Link</p>
+                                <p className="text-muted-foreground text-sm">Project&apos;s Link</p>
                                 <Link href={workExperience.projectLink} className="text-blue-600" target="_blank">
                                     {workExperience.projectLink ? "Link" : "-"}
                                 </Link>

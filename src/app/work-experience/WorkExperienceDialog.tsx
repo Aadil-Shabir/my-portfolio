@@ -37,7 +37,7 @@ const WorkExperienceDialog = ({ experience, isOpen, onOpen, onClose }: WorkExper
                             <p>{experience.duration}</p>
                         </div>
                         <div className="md:col-span-3 col-span-6">
-                            <p className="text-muted-foreground text-sm">Company's Location</p>
+                            <p className="text-muted-foreground text-sm">Company&apos;s Location</p>
                             <p>{experience.location}</p>
                         </div>
                         <div className="md:col-span-3 col-span-6">
@@ -45,14 +45,14 @@ const WorkExperienceDialog = ({ experience, isOpen, onOpen, onClose }: WorkExper
                             <p>{experience.mode}</p>
                         </div>
                         <div className="md:col-span-3 col-span-6">
-                            <p className="text-muted-foreground text-sm">Company's URL</p>
+                            <p className="text-muted-foreground text-sm">Company&apos;s URL</p>
                             <Link href={experience.link || ""} className="text-blue-600" target="_blank">
                                 {experience.link ? "Link" : "-"}
                             </Link>
                         </div>
                         {experience.projectLink && (
                             <div className="md:col-span-3 col-span-6">
-                                <p className="text-muted-foreground text-sm">Project's Link</p>
+                                <p className="text-muted-foreground text-sm">Project&apos;s Link</p>
                                 <Link href={experience.projectLink} className="text-blue-600" target="_blank">
                                     {experience.projectLink ? "Link" : "-"}
                                 </Link>
